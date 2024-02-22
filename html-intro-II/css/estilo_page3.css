@@ -1,0 +1,10 @@
+#secao1 {
+  font-size: 10px;
+}
+
+p {
+    border-style: solid;
+    border-width: 6px;
+    border-color: aqua;
+    border-radius: 4px;
+  }
