@@ -1,0 +1,19 @@
+ul.list-1 {
+  list-style-type: disc;
+  background: coral;
+}
+
+ul.list-2 {
+  list-style-type: square;
+  background: rgb(26, 73, 161);
+}
+
+ul.importante1 {
+  font-size: 30px;
+}
+
+/* independe de elemento html*/
+.importante2 {
+  font-size: 28px;
+  color: brown;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página Responsiva com Media Queries</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    width: 48%;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .column {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="column">
+    <h2>Coluna 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo mauris vel ultrices malesuada.</p>
+  </div>
+  <div class="column">
+    <h2>Coluna 2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo mauris vel ultrices malesuada.</p>
+  </div>
+</div>
+
+</body>
+</html>

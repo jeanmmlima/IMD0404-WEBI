@@ -1,0 +1,10 @@
+/* ul{
+  background: lightgreen;
+} */
+ul li{
+  background: lightgreen;
+}
+
+ul {
+  list-style-type: disc;
+}

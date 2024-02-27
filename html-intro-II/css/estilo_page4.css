@@ -1,0 +1,38 @@
+/* estrutura */
+
+/* header {
+    text-align: center;
+    background-color: lightgray;
+    padding: 20px;
+} */
+
+/* table,th,td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+    vertical-align: center;
+} */
+
+/*tabelas ficarão condensadas ou separadas*/
+
+/* table {
+    border-collapse: collapse;
+  } */
+
+/* cor de fundo */
+
+/* th {
+    background-color: lightgray;
+}
+ */
+/* estilos diferentes */
+/* par */
+
+/* tr:nth-child(even) { 
+    background-color: #eee;
+} */
+
+/* ímpar */
+/* tr:nth-child(odd) {
+    background-color: lightblue;
+} */

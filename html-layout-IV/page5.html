@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Responsiva</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: aquamarine;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      p {
+        font-size: 24px;
+        line-height: 1.5;
+      }
+
+      @media only screen and (max-width: 600px) {
+        p {
+          font-size: 16px;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        body {
+          background-color: rebeccapurple;
+        }
+      }
+
+      @media only screen and (min-width: 1200px) {
+        body {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Texto e Imagem Responsivos</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo
+        mauris vel ultrices malesuada. Sed nec orci lobortis, tincidunt purus
+        id, ultricies leo. Nullam eu elit at urna varius rutrum nec nec ligula.
+        Duis in luctus metus, sit amet faucibus libero. In hac habitasse platea
+        dictumst. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas.
+      </p>
+      <img src="https://via.placeholder.com/800x400" alt="Imagem responsiva" />
+    </div>
+  </body>
+</html>

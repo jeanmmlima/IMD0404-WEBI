@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo Flex</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #333;
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Exemplo Flex com justify-content e align-items</h2>
+
+<div class="container" style="height: 200px;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+</div>
+
+<!-- Exemplo flex-start -->
+<p>Distribui os itens do início para o fim: da esquerda para a direita, em caso de linha, e, de cima para baixo, em caso de coluna.</p>
+<div class="container" style="height: 200px; justify-content: flex-start; align-items: flex-start;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+</div>
+
+<!-- Exemplo flex-end -->
+<p>Distribui os itens do fim para o início: da direita para a esquerda, em caso de linha e, de baixo para cima, em caso de coluna.</p>
+<div class="container" style="height: 200px; justify-content: flex-end; align-items: flex-end;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+</div>
+
+<!-- Exemplo center -->
+<p>Distribui os itens a partir do centro.</p>
+<div class="container" style="height: 200px; justify-content: center; align-items: center;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+</div>
+
+<!-- Exemplo space-between -->
+<p>Os itens terão espaço entre eles.</p>
+<div class="container" style="height: 200px; justify-content: space-between; align-items: center;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+</div>
+
+<!-- Exemplo space-around -->
+<p>Os itens terão espaço antes, depois e entre eles.</p>
+<div class="container" style="height: 200px; justify-content: space-around; align-items: center;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+</div>
+
+<!-- Exemplo space-evenly -->
+<p>Os itens terão espaço igual ao seu redor.</p>
+<div class="container" style="height: 200px; justify-content: space-evenly; align-items: center;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+</div>
+
+<h2> Align-itens </h2>
+
+<!-- Exemplo stretch -->
+<p>Força o item a ocupar todo o espaço disponível (padrão).</p>
+<div class="container" style="height: 200px; align-items: stretch;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+</div>
+
+<!-- Exemplo flex-start -->
+<p>Ocupa apenas o espaço necessário, alinhando de cima para baixo (no caso de linha).</p>
+<div class="container" style="height: 200px; align-items: flex-start;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+</div>
+
+<!-- Exemplo flex-end -->
+<p>Ocupa apenas o espaço necessário, alinhando de baixo para cima (no caso de linha).</p>
+<div class="container" style="height: 200px; align-items: flex-end;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+</div>
+
+<!-- Exemplo center -->
+<p>Ocupa apenas o espaço necessário, alinhando pelo centro.</p>
+<div class="container" style="height: 200px; align-items: center;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+</div>
+
+<!-- Exemplo baseline -->
+<p>Ocupa apenas o espaço necessário, alinhando o conteúdo do contêiner.</p>
+<div class="container" style="height: 200px; align-items: baseline;">
+  <div class="item" style="font-size: 20px;">Item 1</div>
+  <div class="item" style="font-size: 30px;">Item 2</div>
+  <div class="item" style="font-size: 15px;">Item 3</div>
+  <div class="item" style="font-size: 25px;">Item 4</div>
+  <div class="item" style="font-size: 18px;">Item 5</div>
+</div>
+
+</body>
+</html>
