@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#cabecalho {
+  background-color: gray;
+  color: white;
+  height: 200px;
+}
+
+#menu {
+  background-color: azure;
+  width: 30%;
+  padding: 20px;
+  float: left;
+  box-sizing: border-box;
+}
+
+#menu ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+#artigo {
+  width: 70%;
+  background-color: cornsilk;
+  box-sizing: border-box;
+  float: left;
+  padding: 20px;
+}
+
+#rodape {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  clear: both;
+}
+
+#rodape a{
+  color: white;
+} 
