@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inputs</title>
+</head>
+<body>
+
+<form action="">
+
+<label for="i-text">Text:</label>
+<input type="text" id="i-text" placeholder="Digite seu nome:" autofocus><br/><br/>
+
+<label for="i-text1">Somente leitura:</label>
+<input type="text1" id="i-text1" value="Autoria web" readonly><br/><br/>
+
+<label for="i-text2">Desabilitado:</label>
+<input type="text" id="i-text2" value="Autoria web" disabled><br/><br/>
+
+<label for="i-text3">Tamanho e quantidade caracteres:</label>
+<input type="text" id="i-text3" size="40" maxlength="20"><br/><br/>
+
+<label for="i-pass">Password:</label>
+<input type="password" id="i-pass"><br/><br/>
+
+<label for="i-submit">Submit:</label>
+<input type="submit" value="Submit" id="i-submit"><br/><br/>
+
+<label for="i-reset">Reset:</label>
+<input type="reset" id="i-reset"><br/><br/>
+
+<input type="radio" name="genero" value="masculino" checked> Masculino
+<input type="radio" name="genero" value="feminino"> Feminino
+<input type="radio" name="genero" value="outro"> Outros <br/><br/>
+
+<input type="checkbox" name="veiculo1" value="Bicicleta"> Eu tenho uma bicicleta.
+<input type="checkbox" name="veiculo2" value="Carro"> Eu tenho um carro. <br/><br/>
+
+<label for="i-button">Button:</label>
+<input type="button" id="i-button" onclick="alert('Olá Mundo!')" value="Clique me!"><br/><br/>
+
+<!-- HTML 5 Inputs -->
+
+<label for="i-button">Selecione sua cor favorita:</label>
+<input type="color" name="favcolor" id="i-color"><br/><br/>
+
+<label for="i-date">Qual o dia do seu aniverário?</label>
+<input type="date" name="bday" id="i-date" max="2019-05-20"><br/><br/>
+
+<label for="i-time">Qual horário de chegada?</label>
+<input type="datetime-local" name="time" id="i-time"><br/><br/>
+
+<label for="i-email">E-mail</label>
+<input type="email" name="email" id="i-email"><br><br>
+
+<label for="i-file">Selecione um arquivo:</label>
+<input type="file" name="myFile" id="i-file"><br><br>
+
+<label for="i-month">Escolha o mês de seu aniversário</label>
+<input type="month" name="bdaymonth" id="i-month"><br><br>
+
+<label for="i-number">number</label>
+<input type="number" name="quantity" min="0" max="100" step="10" id="number"><br><br>
+
+<label for="i-range">range:</label>
+<input type="range" name="points" min="0" max="10" id="i-range"><br><br>
+
+<label for="i-search">search:</label>
+<input type="search" name="googlesearch" id="i-search"><br><br>
+
+<label for="i-tel">Telefone</label>
+<input type="tel" name="phone" pattern="[0-9]{5}-[0-9]{4}" id="i-tel"><br><br>
+
+<label for="i-time">time:</label>
+<input type="time" name="usr_time" id="i-time"><br><br>
+
+<label for="i-url">URL: </label>
+<input type="url" name="homepage" id="url"><br><br>
+
+<label for="i-week">Selecione a semana</label>
+<input type="week" name="week_year" id="i-week"><br><br>
+
+</form>
+
+</body>
+</html> 
