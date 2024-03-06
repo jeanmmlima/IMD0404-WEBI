@@ -1,0 +1,29 @@
+.container {
+    background-color: lightgray;
+    border: 1px solid grey;
+  }
+  
+  .col {
+    background-color: lightslategrey;
+    border: 1px solid grey;
+  }
+  
+  .col-sm {
+    background-color: lightblue;
+    border: 1px solid grey;
+  }
+  
+  .col-md {
+    background-color: lightcoral;
+    border: 1px solid grey;
+  }
+  
+  .col-lg {
+    background-color: lightseagreen;
+    border: 1px solid grey;
+  }
+  
+  .col-xl {
+    background-color: lightyellow;
+    border: 1px solid grey;
+  } 
