@@ -53,8 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
             var postId = post.getAttribute("data-id");
             var title = post.children[3].innerHTML; //posicao dos elementos com span na árvore DOM de post
             var body = post.children[6].innerHTML;
-            console.log(title);
-            console.log(body);
             document.getElementById("title").value = title;
             document.getElementById("body").value = body;
             document.getElementById("postForm").dataset.mode = "edit";
