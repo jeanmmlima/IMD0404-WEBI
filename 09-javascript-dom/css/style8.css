@@ -1,0 +1,14 @@
+.original-style {
+    color: blue;
+    font-weight: bold;
+}
+
+.changed-style {
+    color: red;
+    font-style: italic;
+}
+
+.modified-style{
+    color: blueviolet;
+    font-weight: bold;
+}

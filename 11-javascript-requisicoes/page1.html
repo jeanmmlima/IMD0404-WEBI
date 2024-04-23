@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário com consulta a API de CEPs</title>
+    <script src="js/script1.js" async></script>
+  </head>
+  <style>
+    .inputClass {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    div {
+      width: 30%;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+  </style>
+
+  <body>
+    <h3>Formulário com consulta a API de CEPs</h3>
+
+    <div>
+      <form action="#">
+        <label>CEP:</label>
+        <input id="cep" class="inputClass" />
+
+        <label>Rua:</label>
+        <input id="logradouro" class="inputClass" />
+
+        <label>Bairro:</label>
+        <input id="bairro" class="inputClass" />
+
+        <label>Cidade:</label>
+        <input id="localidade" class="inputClass" />
+
+        <label>Estado:</label>
+        <input id="uf" class="inputClass" />
+      </form>
+    </div>
+  </body>
+</html>
