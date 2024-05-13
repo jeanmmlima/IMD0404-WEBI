@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Timer from './Timer';
+import TimerClass from './TimerClass';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function tick() {
   root.render(
-    <Timer date={new Date()}/>
+    <TimerClass />
   );
 }
 
