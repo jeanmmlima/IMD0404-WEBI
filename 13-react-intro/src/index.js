@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Timer from './Timer';
 import TimerClass from './TimerClass';
+import Counter from './Counter';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function tick() {
   root.render(
-    <TimerClass />
+    <Counter />
   );
 }
 
