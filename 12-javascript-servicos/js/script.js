@@ -81,11 +81,11 @@ function fetchContacts() {
 // Função para adicionar contato na API
 function addContact(contactData) {
     return fetch('https://imd0404-webi-default-rtdb.firebaseio.com/contacts.json', {
-        method: 'POST',
+        method: 'POST', //enviar dados
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(contactData),
+        body: JSON.stringify(contactData), //os dados que quero enviar - proprierdade body - formato JSON
     })
         .then(response => {
             if (!response.ok) {

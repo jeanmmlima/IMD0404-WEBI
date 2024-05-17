@@ -80,7 +80,7 @@ Uma observação importante é que o array original não é modificado.
 const letras = ['a', 'b', 'c', 'd', 'e', 'f'];
 let resultado = letras.slice(1, 4);
 console.log(resultado); // [ 'b', 'c', 'd' ]
-console.log(letras); // [ 'b', 'c', 'd' ]
+console.log(letras); 
 
 //concat()
 

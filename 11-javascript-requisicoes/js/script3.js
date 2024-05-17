@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const postList = document.getElementById('post-list');
   
-    // Fetch posts from API
+    // Fetch posts from API - carregando lista de posts
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.json();
+        return response.json(); //posts do then subsquente
       })
       .then(posts => {
         // Render posts
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
           postList.appendChild(card);
         });
       })
-      .catch(error => {
+      .catch(error => { //se acontecer algum erro no processamento do fetch
         console.error('There was a problem fetching the posts:', error);
       });
   

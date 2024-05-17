@@ -49,7 +49,7 @@ function setDataInicial() {
 
 function formataData(data){
     const dataEscolhida = new Date(data);
-    const dia = dataEscolhida.getDate().toString().padStart(2, '0');
+    const dia = (dataEscolhida.getDate()+1).toString().padStart(2, '0');
     const mes = (dataEscolhida.getMonth() + 1).toString().padStart(2, '0');
     const ano = dataEscolhida.getFullYear();
     return `${dia}/${mes}/${ano}`;

@@ -8,7 +8,7 @@ function atualizarEnderecoPeloCEP() {
     let request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.send();
-    request.onload = function () {
+    request.onload = function () { //esperando a resposta
         let resposta = request.response;
         atualizarCamposDoFormulario(resposta);
     }
