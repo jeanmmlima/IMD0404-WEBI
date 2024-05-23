@@ -11,13 +11,53 @@ const CustomFormHook = () => {
     feedback: ''
   });
 
-  const handleChange = (event) => {
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value
+    }));
+  };
+
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: checked
+    }));
+  };
+
+  const handleRadioChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value
+    }));
+  };
+
+  const handleSelectChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value
+    }));
+  };
+
+  const handleTextareaChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value
+    }));
+  };
+
+ /*  const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
     setFormData({
       ...formData,
       [name]: type === 'checkbox' ? checked : value
     });
-  };
+  }; */
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -36,7 +76,7 @@ const CustomFormHook = () => {
             id="name"
             name="name"
             value={formData.name}
-            onChange={handleChange}
+            onChange={handleInputChange}
             className="form-input"
           />
         </div>
@@ -47,7 +87,7 @@ const CustomFormHook = () => {
             id="email"
             name="email"
             value={formData.email}
-            onChange={handleChange}
+            onChange={handleInputChange}
             className="form-input"
           />
         </div>
@@ -60,7 +100,7 @@ const CustomFormHook = () => {
                 name="gender"
                 value="male"
                 checked={formData.gender === 'male'}
-                onChange={handleChange}
+                onChange={handleRadioChange}
                 className="form-radio"
               />
               Male
@@ -71,7 +111,7 @@ const CustomFormHook = () => {
                 name="gender"
                 value="female"
                 checked={formData.gender === 'female'}
-                onChange={handleChange}
+                onChange={handleRadioChange}
                 className="form-radio"
               />
               Female
@@ -84,7 +124,7 @@ const CustomFormHook = () => {
               type="checkbox"
               name="subscription"
               checked={formData.subscription}
-              onChange={handleChange}
+              onChange={handleCheckboxChange}
               className="form-checkbox"
             />
             Subscribe to newsletter
@@ -96,7 +136,7 @@ const CustomFormHook = () => {
             id="fruit"
             name="fruit"
             value={formData.fruit}
-            onChange={handleChange}
+            onChange={handleSelectChange}
             className="form-select"
           >
             <option value="">Select a fruit</option>
@@ -112,7 +152,7 @@ const CustomFormHook = () => {
             id="feedback"
             name="feedback"
             value={formData.feedback}
-            onChange={handleChange}
+            onChange={handleTextareaChange}
             className="form-textarea"
           ></textarea>
         </div>
