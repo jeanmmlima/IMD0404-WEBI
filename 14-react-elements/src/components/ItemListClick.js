@@ -65,6 +65,13 @@ class ItemListClick extends Component {
           {items.map((item, index) => (
             <li
               key={item.id}
+              //index === items.length - 1 verifica se o item atual é o último item na lista.
+              /**
+               * Se for o último item, { ...styles.listItem, ...styles.lastItem } 
+               * aplica os estilos combinados de styles.listItem e styles.lastItem.
+               * ...styles.listItem e ...styles.lastItem são sintaxes de espalhamento (spread syntax)
+               *  que combinam os estilos dos objetos styles.listItem e styles.lastItem.
+               */
               style={index === items.length - 1 ? { ...styles.listItem, ...styles.lastItem } : styles.listItem}
               onClick={() => this.handleItemClick(item)}
             >
