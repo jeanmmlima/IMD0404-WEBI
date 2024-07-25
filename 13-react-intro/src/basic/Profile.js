@@ -1,7 +1,7 @@
 import './Profile.css';
 
 const user = {
-    name: 'Hedy Lamarr',
+    name: 'Hedy Test',
     imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
     imageSize: 90,
   };
