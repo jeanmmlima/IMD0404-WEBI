@@ -1,3 +1,4 @@
+
 function MyButton() {
     function handleClick() {
       alert('Você clicou no botão!');

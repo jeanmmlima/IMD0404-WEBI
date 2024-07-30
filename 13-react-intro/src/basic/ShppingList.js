@@ -5,8 +5,9 @@ const products = [
   ];
   
   export default function ShoppingList() {
+
     const listItems = products.map(product =>
-      <li
+      <li 
         key={product.id}
         style={{
           color: product.isFruit ? 'magenta' : 'darkgreen'
@@ -17,7 +18,7 @@ const products = [
     );
   
     return (
-      <ul>{listItems}</ul>
+      <ul>{listItems.length !== 0 ? listItems : 'Não há produtos na lista'}</ul>
     );
   }
   

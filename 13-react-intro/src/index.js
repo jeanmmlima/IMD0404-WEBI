@@ -6,12 +6,14 @@ import MyButton from './basic/MyButton';
 import MyApp1 from './basic/MyApp1';
 import Profile from './basic/Profile';
 import Toogle from './components/Toogle';
+import SaudacaoApp from './basic/SaudacaoApp';
+import ShoppingList from './basic/ShppingList';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <Profile />
+  <ShoppingList />
 );
 
 
