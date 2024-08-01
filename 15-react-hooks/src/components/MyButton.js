@@ -1,17 +1,11 @@
 import { useState } from "react";
 
-function MyButton(){
-
-    const [count, setCount] = useState(0);
-
-    function handleClick() {
-        setCount(count+1);
-    }
+function MyButton({count, onSubmit}){
 
     return(
     <div>
      <p>Valor: {count}</p>
-     <button onClick={handleClick}>Contar</button>
+     <button onClick={onSubmit}>Contar</button>
     </div>
     );
 }

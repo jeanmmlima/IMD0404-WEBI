@@ -3,18 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import MyApp2 from './components/MyApp2';
-import FormHook from './components/FormHook';
-import SimpleFormHook from './components/exer/SimpleFormHook';
-import MyApp from './components/MyApp';
-import Example1 from './components/examples-useeffect/Example1';
-import Example2 from './components/examples-useeffect/Example2';
-import Example3 from './components/examples-useeffect/Example3';
+import {
+  RouterProvider,
+} from "react-router-dom";
+import router from './routes/MyRoutes';
+import MyRouter from './Case1/routes/routes';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Example3 />
+   <RouterProvider router={MyRouter} /> 
   </React.StrictMode>
 );
 

@@ -9,9 +9,9 @@ const Example3 = () => {
     window.addEventListener('scroll', handleScroll);
 
     // Função de limpeza
-    return () => {
+    /* return () => {
       window.removeEventListener('scroll', handleScroll);
-    };
+    }; */
   }, []); // A lista de dependências está vazia, então o efeito é executado apenas uma vez
 
   return <div>Scroll the window to see the effect</div>;
