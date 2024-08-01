@@ -5,11 +5,12 @@ import reportWebVitals from './reportWebVitals';
 
 import MyApp2 from './components/MyApp2';
 import FormHook from './components/FormHook';
+import SimpleFormHook from './components/exer/SimpleFormHook';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FormHook />
+    <SimpleFormHook />
   </React.StrictMode>
 );
 

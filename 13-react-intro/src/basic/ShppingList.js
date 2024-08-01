@@ -6,8 +6,13 @@ const products = [
   
   export default function ShoppingList() {
 
+    function handleClick(event){
+      alert("Clicou no elemento: "+event.target.innerText);
+      console.log(event);
+    }
+
     const listItems = products.map(product =>
-      <li 
+      <li onClick={handleClick}
         key={product.id}
         style={{
           color: product.isFruit ? 'magenta' : 'darkgreen'
