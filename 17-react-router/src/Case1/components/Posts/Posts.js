@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Posts.css";
+import { useNavigate } from "react-router-dom";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Função para buscar dados da API
@@ -36,6 +39,13 @@ const Posts = () => {
     return <div>Error: {error}</div>;
   }
 
+  function handleClickViewPostDetail(event){
+    const postId = event.target.parentElement.id;
+    //navegando para a pagina de detalhe passando o Id do post
+    navigate('/posts/postdetail',{state: {postId: postId} });
+    
+  }
+
   return (
     <div>
       <link
@@ -45,9 +55,9 @@ const Posts = () => {
       <h1>Posts List</h1>
       <ul class="posts-list">
         {posts.map((post) => (
-          <li class="post-item" key={post.id}>
+          <li class="post-item" key={post.id} id={post.id}>
             <span class="post-title">{post.title}</span>
-            <button class="view-button">
+            <button class="view-button" onClick={handleClickViewPostDetail}>
               <i class="fas fa-eye"></i> View
             </button>
           </li>

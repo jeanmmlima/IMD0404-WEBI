@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import './Users.css';
+import { useParams } from 'react-router-dom';
 
 const UserDetails = () => {
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const params = useParams();
+
   useEffect(() => {
     // Função para buscar dados da API
     const fetchData = async () => {
       try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+        const userId = params.userId;
+        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -41,8 +45,13 @@ const UserDetails = () => {
           <div class="post-item">
             
             <span class="post-title">{user.id}</span>
-            <span class="post-title">{user.title}</span>
-            <span class="post-title">{user.body}</span>
+            <span class="post-title">{user.name}</span>
+            <span class="post-title">{user.email}</span>
+            <div class="post-item"> 
+                <span class="post-title">{user.address.street}</span>
+                <span class="post-title">{user.address.city}</span>
+                <span class="post-title">{user.address.zip}</span>
+            </div>
           </div>
     </div>
   );

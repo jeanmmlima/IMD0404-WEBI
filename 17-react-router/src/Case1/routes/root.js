@@ -17,7 +17,7 @@ export default function Root() {
               <Link to={`users`}>Users</Link>
               </li>
               <li>
-              <Link to={`posts`}>About me</Link>
+              <Link to={`about`}>About me</Link>
               </li>
             </ul>
           </nav>
