@@ -1,0 +1,61 @@
+/* General container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styling for the title */
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Styling for the posts list */
+  .posts-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Styling for each post item */
+  .post-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Styling for the post title */
+  .post-title {
+    font-size: 16px;
+    color: #555;
+    margin-right: 15px;
+  }
+  
+  /* Styling for the view button */
+  .view-button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .view-button i {
+    margin-right: 5px;
+  }
+  
+  /* Hover effect for the view button */
+  .view-button:hover {
+    color: #0056b3;
+  }
+  
+  .view-button:focus {
+    outline: none;
+  }
+  

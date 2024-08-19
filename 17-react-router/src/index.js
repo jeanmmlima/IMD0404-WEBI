@@ -2,16 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Counter from './components/Counter';
-import TodoApp from './components/example-context/TodoApp';
-import { TodoProvider } from './components/example-context/TodoContext';
+
+import {
+  RouterProvider,
+} from "react-router-dom";
+import router from './routes/MyRoutes';
+import MyRouter from './Case1/routes/routes';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TodoProvider>
-      <TodoApp />
-    </TodoProvider>
+   <RouterProvider router={MyRouter} /> 
   </React.StrictMode>
 );
 

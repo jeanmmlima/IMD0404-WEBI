@@ -1,24 +1,20 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Timer from './Timer';
-import TimerClass from './TimerClass';
-import Counter from './Counter';
-import Toogle from './Toogle';
+import MyButton from './basic/MyButton';
+import MyApp1 from './basic/MyApp1';
+import Profile from './basic/Profile';
+import Toogle from './components/Toogle';
+import SaudacaoApp from './basic/SaudacaoApp';
+import ShoppingList from './basic/ShppingList';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
-
-function tick() {
-  root.render(
-    <Toogle />
-  );
-}
-
-setInterval(tick, 1000);
+root.render(
+  <ShoppingList />
+);
 
 
 

@@ -2,6 +2,14 @@ import React from 'react';
 
 class TimerClass extends React.Component {
 
+  /* function tick() {
+  root.render(
+    <Toogle />
+  );
+}
+
+setInterval(tick, 1000); */
+
   constructor(props) {
     super(props)
     this.state = { date: new Date() }

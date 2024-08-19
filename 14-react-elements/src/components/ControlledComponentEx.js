@@ -13,7 +13,15 @@ class ControlledComponentEx extends Component {
   };
 
   handleSubmit = (event) => {
-    event.preventDefault();
+    /**
+     * A função event.preventDefault() é um método que pertence à interface 
+     * Event em JavaScript. Ela é usada para cancelar o comportamento padrão de um evento.
+     *  Isso significa que, quando invocada, a função impede que o evento realize a ação 
+     * que ele normalmente executaria.
+      O método event.preventDefault() é frequentemente usado em formulários, 
+      links e outras interações do usuário onde o comportamento padrão não é desejado ou precisa ser alterado.
+     */
+    event.preventDefault(); // Impede o comportamento padrão de enviar o formulário e recarregar a página
     alert(`Submitted value: ${this.state.inputValue}`);
   };
 

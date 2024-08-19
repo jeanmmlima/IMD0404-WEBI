@@ -3,9 +3,7 @@ import React, { useEffect } from 'react';
 const Example1 = () => {
   useEffect(() => {
     console.log('Componente montado');
-    return () => {
-      console.log('Componente desmontado');
-    };
+    
   }, []); 
   /**
    * Se a lista de dependências estiver vazia ([]), 
