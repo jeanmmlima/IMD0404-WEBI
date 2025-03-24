@@ -10,7 +10,7 @@ function SaudacaoApp() {
   return (
     <div>
       <MinhaSaudacao nome="Maria" />
-      <MinhaSaudacao nome="João" />
+      <MinhaSaudacao nome="Jean" />
     </div>
   );
 }
