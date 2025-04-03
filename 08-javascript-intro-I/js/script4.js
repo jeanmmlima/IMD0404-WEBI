@@ -1,15 +1,11 @@
 
 // Arrays
-
 var arrayHomogenea = ['segunda', 'terça', 'quarta'];
 var arrayHeterogeneo = ['domingo', 3, true];
 
 //Acessando elementos de arrays 
-
 const cidades = ['Natal', 'Fortaleza', 'Recife'];
-
 var minhaCidade = cidades[0];
-
 console.log(minhaCidade)
 console.log(cidades[2]);
 
@@ -40,13 +36,11 @@ console.log(objetivos2);
 console.log(itemRemovido); 
 
 //SHIFT - remove o primeiro elemento de um array. 
-
 const objetivos3 = ['estudar javascript', 'passar na disciplina', 'trabalhar com TI', 'relaxar'];
 var itemRemovido = objetivos3.shift();
 console.log(objetivos3);
 
 //UNSHIFT - Já o método unshift() permite adicionar itens ao início de um array. 
-
 const objetivos4 = ['estudar javascript', 'passar na disciplina', 'trabalhar com TI', 'relaxar'];
 objetivos4.unshift('a', 'b');
 console.log(objetivos4)
