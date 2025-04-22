@@ -1,31 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo 8</title>
+  </head>
+  <body>
+    <ul id="lista">
+      <li>Item 1</li>
+      <li id="item2">Item 2</li>
+      <li>Item 3</li>
+    </ul>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manipulação do DOM</title>
-    <script src="js/script8.js"></script>
-    <link rel="stylesheet" href="css/style8.css">
-</head>
-
-<body>
-    <h1>Manipulação do DOM</h1>
-
-    <!-- Elementos iniciais -->
-    <div id="container">
-        <p class="original-style">Este é um parágrafo inicial.</p>
-        <p class="original-style">Este é outro parágrafo inicial.</p>
-    </div>
-
-    <!-- Botões para manipulação -->
-    <button onclick="inserirNode()">Inserir Nó</button>
-    <button onclick="removerNode()">Remover Nó</button>
-    <button onclick="modificarAtributo()">Modificar Atributo</button>
-    <button onclick="modificarEstilo()">Modificar Estilo</button>
-    <button onclick="modificarClasse()">Modificar Classe</button>
-
-   
-</body>
-
+    <script>
+      let lista = document.getElementById("lista");
+      // Cria um novo item de lista
+      let novoItem = document.createElement("li");
+      novoItem.textContent = "Item 1.5";
+      // Referência: item 2
+      let item2 = document.getElementById("item2");
+      // Insere novoItem antes do item2
+      lista.insertBefore(novoItem, item2);
+    </script>
+  </body>
 </html>
