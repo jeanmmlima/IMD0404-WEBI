@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo Simples removeChild</title>
+</head>
+<body>
+
+  <div id="pai">
+    <p id="filho">Sou o filho e serei removido!</p>
+  </div>
+
+  <button onclick="removerFilho()">Remover Filho</button>
+
+  <script>
+    function removerFilho() {
+      const pai = document.getElementById("pai");
+      const filho = document.getElementById("filho");
+      if (filho) {
+        pai.removeChild(filho);
+      } else {
+        alert("O filho já foi removido.");
+      }
+    }
+  </script>
+
+</body>
+</html>
