@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="meuBotao">Clique aqui</button>
+
+    <script>
+      const botao = document.getElementById("meuBotao");
+
+      botao.addEventListener("click", function (e) {
+        console.log(e); // Mostra todas as infos do evento no console
+        alert("Você clicou em: " + e.target.tagName); // Mostra o nome da tag clicada
+      });
+    </script>
+  </body>
+</html>
