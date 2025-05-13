@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo removeChild</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 8px;
+      background-color: #f0f0f0;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Lista de Tarefas</h2>
+  <ul id="lista">
+    <li id="1">Tarefa 1</li>
+    <li id="2">Tarefa 2</li>
+    <li id="3">Tarefa 3</li>
+  </ul>
+
+  <button onclick="removerUltimo()">Remover último item</button>
+  <button onclick="adicionarUltimo()">Adicionar próximo item</button>
+
+  <script>
+    function removerUltimo() {
+      const lista = document.getElementById("lista");
+      const ultimoItem = lista.lastElementChild;
+      if (ultimoItem) {
+        lista.removeChild(ultimoItem);
+      } else {
+        alert("A lista já está vazia!");
+      }
+    }
+
+    function adicionarUltimo(){
+        const lista = document.getElementById("lista");
+        const ultimoItem = lista.lastElementChild;
+        if(ultimoItem){
+            lista.appendChild(novoItem(ultimoItem.id));
+        } else {
+            lista.appendChild(novoItem(0));
+        }
+    }
+
+    function novoItem(id){
+        let novoItem = document.createElement("li");
+        let novoId = Number(id) + 1;
+        novoItem.textContent = `Tarefa ${novoId}`;
+        novoItem.id = novoId;
+        return novoItem;
+    }
+  </script>
+
+</body>
+</html>

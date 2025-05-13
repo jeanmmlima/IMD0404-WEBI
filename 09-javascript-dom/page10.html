@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo setAttribute com style e class</title>
+  <style>
+    .nova-classe {
+      border: 2px solid red;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="caixa" class="caixa-original" style="width:200px; height:100px; background-color:lightgray;">
+    Sou uma caixa
+  </div>
+
+  <button onclick="alterarCaixa()">Alterar Caixa</button>
+  <button onclick="caixaOriginal()">Caixa Original</button>
+
+  <script>
+    function alterarCaixa() {
+      const caixa = document.getElementById("caixa");
+      caixa.setAttribute("style", "width:200px; height:100px; background-color:lightgreen;");
+      caixa.setAttribute("class", "nova-classe");
+    }
+
+    function caixaOriginal(){
+        const caixa = document.getElementById("caixa");
+      caixa.setAttribute("style", "width:200px; height:100px; background-color:lightgray;");
+      caixa.setAttribute("class", "caixa-original");
+    }
+  </script>
+
+</body>
+</html>

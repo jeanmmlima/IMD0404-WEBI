@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo com style e classList</title>
+  <style>
+    .destaque {
+      border: 2px solid blue;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="caixa" style="width:200px; height:100px; background-color:lightgray;">
+    Sou uma caixa
+  </div>
+
+  <button onclick="mudarEstilo()">Modificar estilo direto</button>
+  <button onclick="alternarClasse()">Alternar classe destaque</button>
+
+  <script>
+    function mudarEstilo() {
+      const caixa = document.getElementById("caixa");
+      caixa.style.backgroundColor = "lightcoral"; // altera diretamente a cor
+      caixa.style.borderRadius = "10px";          // adiciona borda arredondada
+    }
+
+    function alternarClasse() {
+      const caixa = document.getElementById("caixa");
+      caixa.classList.toggle("destaque"); // adiciona se não tiver, remove se já tiver
+    }
+  </script>
+
+</body>
+</html>
