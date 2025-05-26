@@ -5,17 +5,25 @@ var campos = ['logradouro', 'bairro', 'localidade', 'uf'];
 function atualizarEnderecoPeloCEP() {
     let cep = campoCEP.value;
     let requestURL = 'https://viacep.com.br/ws/' + cep + '/json/';
-    let request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.send();
-    request.onload = function () { //esperando a resposta
-        let resposta = request.response;
-        atualizarCamposDoFormulario(resposta);
-    }
+
+    fetch(requestURL)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao buscar o CEP');
+            }
+            return response.json(); // <- Pegamos o texto bruto
+        })
+        .then(dadosJson => {
+            atualizarCamposDoFormulario(dadosJson); 
+        })
+        .catch(error => {
+            console.error("Erro na requisição:", error);
+            alert("Erro ao buscar o endereço. Verifique o CEP.");
+        });
 }
 
-function atualizarCamposDoFormulario(dadosJson) {
-    let dados = JSON.parse(dadosJson);
+function atualizarCamposDoFormulario(dados) {
+    console.log(dados);
     if (!dados.erro) {
         campos.forEach(item => {
             document.getElementById(item).value = dados[item];
