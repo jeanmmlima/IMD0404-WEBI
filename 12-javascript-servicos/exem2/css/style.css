@@ -10,6 +10,10 @@ body {
     text-align: center;
     padding: 10px 0;
   }
+
+  footer {
+  border-top: 1px solid #095aab;
+}
   
   .container {
     max-width: 600px;
@@ -34,6 +38,7 @@ body {
   
   .contact img {
     max-width: 100px;
+    max-height: 100px;
     border-radius: 50%;
   }
   
@@ -57,3 +62,28 @@ body {
     background-color: #0056b3;
   }
   
+  button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Estilo específico para botão Remover */
+button.remove {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Estilo específico para botão Editar */
+button.edit {
+  background-color: #3498db;
+  color: white;
+}

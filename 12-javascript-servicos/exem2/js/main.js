@@ -1,85 +1,83 @@
+import createContactCard from "./components/ContactCard.js";
 import { ContactService } from "./service/ContactService.js";
 
-var contactService = new ContactService;
+var contactService = new ContactService();
 
-const contactList = document.getElementById('contact-list');
-const addContactForm = document.getElementById('add-contact-form');
+const contactList = document.getElementById("contact-list");
+const addContactForm = document.getElementById("add-contact-form");
 
-document.addEventListener('DOMContentLoaded', listContacts);
+document.addEventListener("DOMContentLoaded", listContacts);
 
-// Event listener para o envio do formulário
-addContactForm.addEventListener('submit', submitContact);
-
-function listContacts(){
-     // Busca contatos na API
-    contactService.fetchContacts()
-     .then(contacts => {
-         renderContacts(contacts);
-     })
-     .catch(error => {
-         console.error('Houve um problema ao buscar os contatos:', error);
-     });
-
-}
-
-function submitContact(event){
-    event.preventDefault(); // Evita o envio padrão do formulário
-
-    const formData = new FormData(addContactForm);
-    const contactData = {
-        name: formData.get('name'),
-        phone: formData.get('phone'),
-        email: formData.get('email'),
-        photo: formData.get('photo') || 'https://placehold.co/100', // Foto padrão
-    };
-
-    contactService.addContact(contactData)
-        .then(() => {
-            return contactService.fetchContacts();
-        })
-        .then(contacts => {
-            renderContacts(contacts);
-            addContactForm.reset(); // Limpa os campos do formulário
-        })
-        .catch(error => {
-            console.error('Houve um problema ao adicionar o contato:', error);
-        });
-}
+addContactForm.addEventListener("submit", submitContact);
 
 
-// Função para renderizar contatos na página
-function renderContacts(contacts) {
-    contactList.innerHTML = ''; // Limpa os contatos existentes
+function listContacts() {
+  // Busca contatos na API
 
-    contacts.forEach(contact => {
-        const contactCard = createContactCard(contact);
-        contactList.appendChild(contactCard);
+  const spinner = document.getElementById("spinner");
+  spinner.style.display = "block"; // Mostra o spinner
+
+  contactService
+    .fetchContacts()
+    .then((contacts) => {
+      renderContacts(contacts);
+    })
+    .catch((error) => {
+      console.error("Houve um problema ao buscar os contatos:", error);
+    }).finally(() => {
+        spinner.style.display = "none"; // Esconde o spinner
     });
 }
 
-// Função para criar o card de contato
-function createContactCard(contact) {
-    
-    const contactCard = document.createElement('div');
-    contactCard.classList.add('contact');
+function submitContact(event) {
+  event.preventDefault(); // Evita o envio padrão do formulário
 
-    const photo = document.createElement('img');
-    photo.src = contact.photo;
-    photo.alt = contact.name;
+  const formData = new FormData(addContactForm);
+  const contactData = {
+    name: formData.get("name"),
+    phone: formData.get("phone"),
+    email: formData.get("email"),
+    photo: formData.get("photo") || "https://placehold.co/100", // Foto padrão
+  };
 
-    const name = document.createElement('h3');
-    name.textContent = contact.name;
+  let mode = this.dataset.mode;
+  let contactId = this.dataset.id;
 
-    const phone = document.createElement('p');
-    phone.textContent = `Telefone: ${contact.phone}`;
+  if(mode === "edit"){
 
-    const email = document.createElement('p');
-    email.textContent = `Email: ${contact.email}`;
+    contactService.updateContact(contactId,contactData)
+    .then(() => {
+        return listContacts();
+    }).then(() => {
+      addContactForm.reset(); // Limpa os campos do formulário
+    }).catch((error) => {
+        console.error("Houve um problema ao atualizar o contato:", error);
+    })
 
-    contactCard.appendChild(photo);
-    contactCard.appendChild(name);
-    contactCard.appendChild(phone);
-    contactCard.appendChild(email);
+  } else {
+    contactService
+    .addContact(contactData)
+    .then(() => {
+      return contactService.fetchContacts();
+    })
+    .then((contacts) => {
+      renderContacts(contacts);
+      addContactForm.reset(); // Limpa os campos do formulário
+    })
+    .catch((error) => {
+      console.error("Houve um problema ao adicionar o contato:", error);
+    });
+  }
 
-    return contactCard;
+
+  
+}
+// Função para renderizar contatos na página
+function renderContacts(contacts) {
+  contactList.innerHTML = ""; // Limpa os contatos existentes
+
+  contacts.forEach((contact) => {
+    const contactCard = createContactCard(contact,listContacts);
+    contactList.appendChild(contactCard);
+  });
 }
