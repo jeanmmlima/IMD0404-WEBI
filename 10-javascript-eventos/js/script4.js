@@ -18,7 +18,7 @@ const listaDeTarefas = [];
 formTarefa.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const idTarefa = gerarIdTarefa(); // Gerar ID pseudoaleatório
+    const idTarefa = gerarIdTarefa(); // Gerar ID pseudoaleatório    
     const tarefa = new Tarefa(idTarefa, descricao.value, data.value);
     listaDeTarefas.push(tarefa);
     adicionarTarefaNaLista();
