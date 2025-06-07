@@ -1,6 +1,6 @@
 import { Contact } from "../model/Contact.js";
 
-var baseUrl = "https://imd0404-webi-default-rtdb.firebaseio.com/";
+var baseUrl = "https://webi-20251-imd0404-default-rtdb.firebaseio.com/";
 
 export class ContactService {
   // Função para buscar contatos na API e retornar uma lista deles

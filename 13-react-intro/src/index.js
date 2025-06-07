@@ -2,25 +2,21 @@ import React, { Profiler } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import MyButton from './basic/MyButton';
-import MyApp1 from './basic/MyApp1';
+import MyApp from './basic/MyApp';
 import Profile from './basic/Profile';
-import Toogle from './components/Toogle';
-import SaudacaoApp from './basic/SaudacaoApp';
+import Greetings from './basic/Greeting';
 import ShoppingList from './basic/ShppingList';
-import Hello from './basic/Hello';
-import App from './App';
+import HelloWorld from './basic/HelloWorld';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   //<App />
-  //<Hello />
-  //<MyApp1 />
-  //<MyButton />
+  //<HelloWorld />
+  //<Greetings />
+  //<MyApp />
   //<Profile />
-  //<SaudacaoApp />
   <ShoppingList />
 );
 
