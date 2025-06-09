@@ -13,14 +13,6 @@ const Counter = () => {
     setCount(newValue);
   };
 
-  /* const increment = () => {
-    setCount(prevCount => prevCount + 1);
-  };
-
-  const decrement = () => {
-    setCount(prevCount => prevCount - 1);
-  }; */
-
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
       <h1>Counter: {count}</h1>
