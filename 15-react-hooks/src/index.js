@@ -5,11 +5,16 @@ import reportWebVitals from './reportWebVitals';
 
 
 import UserList from './components/examples-useeffect/UserList';
+import Counter from './components/Counter';
+import MyApp1 from './components/MyApp1/MyApp';
+import MyApp2 from './components/MyApp2/MyApp2';
+import FormHook from './components/Forms/FormHook';
+import SimpleFormHook from './components/exer/SimpleFormHook';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserList />
+    <SimpleFormHook />
   </React.StrictMode>
 );
 

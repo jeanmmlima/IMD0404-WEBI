@@ -6,20 +6,12 @@ const SimpleFormHook = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  /* const handleNameInput = (event) => {
+  const handleNameInput = (event) => {
     setName(event.target.value);
   }
 
   const handleEmailInput = (event) => {
     setEmail(event.target.value);
-  } */
-
-  const handleInput = (event) => {
-    if(event.target.name === "name"){
-      setName(event.target.value);
-    } else if(event.target.name === "email"){
-      setEmail(event.target.value);
-    }
   }
 
   const handleSubmit = (event) => {
@@ -44,7 +36,7 @@ const SimpleFormHook = () => {
             name="name"
             className="form-input"
             value={name}
-            onChange={handleInput}
+            onChange={handleNameInput}
 
           />
           <p className='form-validation'>{`Name: ${name}`}</p>
@@ -57,7 +49,7 @@ const SimpleFormHook = () => {
             name="email"
             className="form-input"
             value={email}
-            onChange={handleInput}
+            onChange={handleEmailInput}
 
           />
           <p className='form-validation'>{`Email: ${email}`}</p>

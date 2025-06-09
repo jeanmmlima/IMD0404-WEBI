@@ -35,7 +35,7 @@
   .form-textarea,
   .form-radio,
   .form-checkbox {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -64,6 +64,7 @@
   .form-textarea {
     resize: vertical;
     height: 100px;
+    width: 90%;
   }
   
   .form-button {
